@@ -1,5 +1,5 @@
 # lpips-pytorch
-[![CircleCI](https://circleci.com/gh/S-aiueo32/lpips-pytorch.svg?style=svg)](https://circleci.com/gh/S-aiueo32/lpips-pytorch)
+[![CircleCI](https://circleci.com/gh/S-aiueo32/lpips-pytorch.svg?style=svg)](https://circleci.com/gh/S-aiueo32/lpips-pytorch)  ![](https://img.shields.io/badge/LPIPS%20ver.-0.1-brightgreen)
 
 ## Description
 Developing perceptual distance metrics is a major topic in recent image processing problems.
