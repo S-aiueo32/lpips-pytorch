@@ -10,13 +10,9 @@ from PerceptualSimilarity.models import PerceptualLoss
 
 img = Image.open(Path(__file__).parents[1].joinpath('data/lenna.png'))
 img_x2 = img.resize((x // 2 for x in img.size)).resize(img.size)
-img_x3 = img.resize((x // 3 for x in img.size)).resize(img.size)
-img_x4 = img.resize((x // 4 for x in img.size)).resize(img.size)
 
 tensor_org = TF.to_tensor(img).unsqueeze(0) * 2 - 1
 tensor_x2 = TF.to_tensor(img_x2).unsqueeze(0) * 2 - 1
-tensor_x3 = TF.to_tensor(img_x3).unsqueeze(0) * 2 - 1
-tensor_x4 = TF.to_tensor(img_x4).unsqueeze(0) * 2 - 1
 
 
 def test_functional():
