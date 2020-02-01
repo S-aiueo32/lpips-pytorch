@@ -1,0 +1,3 @@
+[submodule "PerceptualSimilarity"]
+	path = PerceptualSimilarity
+	url = https://github.com/S-aiueo32/PerceptualSimilarity.git
