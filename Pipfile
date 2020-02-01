@@ -10,6 +10,7 @@ scikit-image = "*"
 tqdm = "*"
 pytest = "*"
 jupyterlab = "*"
+pytest-cov = "*"
 
 [packages]
 torch = "*"
