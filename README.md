@@ -15,8 +15,7 @@ This output is definitely the same result because the weights are converted from
 
 ## Usage
 ```python
-from lpips_pytorch import LPIPS
-from lpips_pytorch import lpips
+from lpips_pytorch import LPIPS, lpips
 
 
 # define as a criterion module (recommended)
@@ -31,13 +30,14 @@ loss = lpips(x, y, net_type='alex', version='0.1')
 ```
 
 ## Install
-1. Clone this repository into your project
-    ```
-    git clone https://github.com/S-aiueo32/lpips-pytorch.git
+1. Clone this repository and move into your project
+    ```shell
+    ~ $ git clone https://github.com/S-aiueo32/lpips-pytorch.git
+    ~ $ mv lpips-pytorch/lpips-pytorch <YOUR_PROJECT>
     ```
 2. Install by `pip`
-    ```
-    pip install git+https://github.com/S-aiueo32/lpips-pytorch.git
+    ```shell
+    $ pip install git+https://github.com/S-aiueo32/lpips-pytorch.git
     ```
 
 ## License
