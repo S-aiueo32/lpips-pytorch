@@ -21,15 +21,11 @@ jobs:
       - run:
           name: initialize submodule
           command: |
-            git submodule update --init
+            git submodule init
+            git submodule update --remote
       - run:
           name: run test
           command: |
             . venv/bin/activate
             mkdir -p test-reports
-            pytest --junitxml=test-reports/junit.xml --cov=src --cov-report html:test-reports/coverage -k 'not gpu'
-      - store-test-results:
-          path: test-reports
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+            pytest tests -k 'not gpu'
