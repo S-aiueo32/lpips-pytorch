@@ -15,8 +15,8 @@ This output is definitely the same result because the weights are converted from
 
 ## Usage
 ```python
-from lpips import LPIPS
-from lpips import lpips
+from lpips_pytorch import LPIPS
+from lpips_pytorch import lpips
 
 
 # define as a criterion module (recommended)

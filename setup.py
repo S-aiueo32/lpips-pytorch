@@ -1,11 +1,10 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 setup(
-    name='lpips-pytorch',
+    name='lpips_pytorch',
     version='latest',
     description='LPIPS as a Package.',
-    packages=find_packages(
-        exclude=('tests', 'data', 'PerceptualSimilarity')),
+    packages=['lpips_pytorch', 'lpips_pytorch.modules'],
     author='So Uchida',
     author_email='s.aiueo32@gmail.com',
     install_requires=["torch", "torchvision"],
