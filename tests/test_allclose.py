@@ -4,8 +4,8 @@ import torchvision.transforms.functional as TF
 from PIL import Image
 from torch.testing import assert_allclose
 
-from lpips import LPIPS
-from lpips import lpips
+from lpips_pytorch import LPIPS
+from lpips_pytorch import lpips
 from PerceptualSimilarity.models import PerceptualLoss
 
 img = Image.open(Path(__file__).parents[1].joinpath('data/lenna.png'))
