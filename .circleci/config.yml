@@ -11,10 +11,8 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install --upgrade pip
-            pip install pytest
-            pip install pytest-cov
-            pip install flake8
-            pip install -e ./.
+            pip install pipenv
+            pipenv install --dev --system
       - restore_cache:
            keys:
               - v1-dependencies-{{ .Branch }}-{{ checksum "setup.py" }}
