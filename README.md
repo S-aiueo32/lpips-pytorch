@@ -43,7 +43,7 @@ loss = lpips(x, y, net_type='alex', version='0.1')
 ## License
 [BSD 2-Clause "Simplified" License](LICENSE).
 
-## Referemce
+## Reference
 1. Zhang, Richard, et al. "The unreasonable effectiveness of deep features as a perceptual metric." Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2018.
 
 ## Acknowledgements
