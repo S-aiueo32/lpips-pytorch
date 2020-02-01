@@ -21,8 +21,9 @@ jobs:
               - v1-dependencies-{{ .Branch }}-
               - v1-dependencies-
       - run:
-        name: initialize submodule
-        command: git init PerceptualSimilarity
+          name: initialize submodule
+          command: |
+            git init PerceptualSimilarity
       - run:
           name: run test
           command: |
