@@ -23,7 +23,7 @@ jobs:
       - run:
           name: initialize submodule
           command: |
-            git init PerceptualSimilarity
+            git submodule update --init
       - run:
           name: run test
           command: |
