@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.4
+    steps:
+      - checkout
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install --upgrade pip
+            pip install pytest
+            pip install pytest-cov
+            pip install flake8
+            pip install -e ./.
+      - restore_cache:
+           keys:
+              - v1-dependencies-{{ .Branch }}-{{ checksum "setup.py" }}
+              - v1-dependencies-{{ .Branch }}-
+              - v1-dependencies-
+      - run:
+          name: run test
+          command: |
+            . venv/bin/activate
+            mkdir -p test-reports
+            pytest --junitxml=test-reports/junit.xml --cov=src --cov-report html:test-reports/coverage -k 'not gpu'
+      - store-test-results:
+          path: test-reports
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports
